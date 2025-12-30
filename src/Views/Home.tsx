@@ -232,11 +232,26 @@ const Home: React.FC = () => {
     interest: 'investor'
   });
   const [videoPlaying, setVideoPlaying] = useState<string | null>(null);
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(() => {
+    // Get device language or default to French (since content is in French)
+    return navigator.language.split('-')[0] || 'fr';
+  });
   
   const heroRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+
+  // Language change effect - logs selected language for debugging
+  useEffect(() => {
+    console.log('Language selected:', selectedLanguage);
+  }, [selectedLanguage]);
+
+  // Effet pour gérer la sélection de langue
+  useEffect(() => {
+    // Cette logique peut être utilisée pour des actions supplémentaires si nécessaire
+    console.log('Selected language:', selectedLanguage);
+  }, [selectedLanguage]);
 
   // Effet pour calculer le prix lorsque le nombre d'invités change
   useEffect(() => {
@@ -343,7 +358,7 @@ ${formData.message}
       de contrôler l'accès à leurs événements avec une précision inégalée.
             
       L'équipe derrière Numeric-Paper possède une expertise approfondie dans les technologies blockchain, la cryptographie 
-      et le développement d'applications sécurisées. Notre fondateur, ${projectData.fullName}, aumoins 3 ans d'expérience 
+      et le développement d'applications sécurisées. Notre fondateur, <span translate='no'>${projectData.fullName}</span>, aumoins 3 ans d'expérience 
       dans le développement de solutions digitales innovantes pour le marché africain et international. Son portfolio comprend 
       plusieurs applications à succès dans les domaines de la finance digitale, de l'e-commerce et des technologies mobiles.
       
@@ -406,7 +421,7 @@ ${formData.message}
           <div className="logo">
             <span className="logo-icon"><img src="/favicon.ico" alt="Numeric-Paper" width="40px" /></span>
             <span className="logo-text">
-              <strong>{projectData.name}</strong>
+              <strong><span translate="no">{projectData.name}</span></strong>
               <small>by {projectData.company}</small>
             </span>
           </div>
@@ -435,6 +450,60 @@ ${formData.message}
         </div>
       </nav>
 
+      {/* Language Selector */}
+      <div className="language-selector-container">
+        <div className="language-selector-wrapper">
+          <select 
+            className="language-select"
+            value={selectedLanguage}
+            onChange={(e) => {
+              const newLang = e.target.value;
+              setSelectedLanguage(newLang);
+              
+              // Redirect to Google Translate for manual translation
+              if (newLang !== 'fr') {
+                const currentUrl = encodeURIComponent(window.location.href);
+                const googleTranslateUrl = `https://translate.google.com/translate?sl=fr&tl=${newLang}&u=${currentUrl}`;
+                window.open(googleTranslateUrl, '_blank');
+              }
+            }}
+          >
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="ar">العربية</option>
+            <option value="zh">中文</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Language Selector */}
+      <div className="language-selector-container">
+        <div className="language-selector-wrapper">
+          <select 
+            className="language-select"
+            value={selectedLanguage}
+            onChange={(e) => {
+              const newLang = e.target.value;
+              setSelectedLanguage(newLang);
+              
+              // Trigger Google Translate
+              const googleTranslateCombo = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+              if (googleTranslateCombo) {
+                googleTranslateCombo.value = newLang;
+                googleTranslateCombo.dispatchEvent(new Event('change'));
+              }
+            }}
+          >
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="ar">العربية</option>
+            <option value="zh">中文</option>
+          </select>
+        </div>
+      </div>
+
       {/* Section Hero */}
       <section id="home" className="hero-section" ref={heroRef}>
         <div className="hero-background">
@@ -447,13 +516,12 @@ ${formData.message}
           </div>
           
           <h1 className="hero-title">
-            <span style={{color:'wheat'}}>Numeeric-Paper</span><br />
+            <span style={{color:'wheat'}}><span translate="no">Numeric-Paper</span></span><br />
             Nous cherchons un Sponsor ou un Acheteur
           </h1>
           
           <p className="hero-subtitle">
-            {projectData.tagline} - 
-            Sponsorisez ou achetez notre projet innovant pour révolutionner la gestion d'événements en toute sécurité.
+            {projectData.tagline} - Créez, gérez et monétisez vos événements avec notre plateforme tout-en-un
           </p>
           
           <div className="hero-stats">
@@ -500,7 +568,7 @@ ${formData.message}
       <section id="project" className="section project-section">
         <div className="section-container">
           <div className="section-header">
-            <h2>Le Projet <span className="highlight">Numeric-Paper</span></h2>
+            <h2>Le Projet <span className="highlight"><span translate="no">Numeric-Paper</span></span></h2>
             <p className="section-subtitle">
               Une solution complète de gestion d'événements et d'invitations virtuelles sécurisées
             </p>
@@ -508,9 +576,9 @@ ${formData.message}
           
           <div className="project-details">
             <div className="project-description">
-              <h3>Qu'est-ce que Numeric-Paper ?</h3>
+              <h3>Qu'est-ce que <span translate="no">Numeric-Paper</span> ?</h3>
               <p>
-                Numeric-Paper est une plateforme innovante qui permet la création d'événements virtuels et hybrides 
+                <span translate="no">Numeric-Paper</span> est une plateforme innovante qui permet la création d'événements virtuels et hybrides 
                 avec des invitations digitales sécurisées utilisant la technologie QR Code avancée. 
                 Contrairement aux solutions traditionnelles, nos invitations sont impossibles à copier ou falsifier, 
                 offrant un niveau de sécurité inégalé pour tout type d'événement.
@@ -639,7 +707,7 @@ ${formData.message}
           <div className="section-header">
             <h2>Démonstration <span className="highlight">Visuelle</span></h2>
             <p className="section-subtitle">
-              Découvrez Numeric-Paper en action
+              Découvrez <span translate="no">Numeric-Paper</span> en action
             </p>
           </div>
           
@@ -861,7 +929,7 @@ ${formData.message}
           <div className="section-header">
             <h2>L'Équipe <span className="highlight">Fondatrice</span></h2>
             <p className="section-subtitle">
-              Derrière l'innovation Numeric-Paper
+              Derrière l'innovation <span translate="no">Numeric-Paper</span>
             </p>
           </div>
           
@@ -873,7 +941,7 @@ ${formData.message}
             </div>
             
             <div className="team-info">
-              <h3>{projectData.fullName}</h3>
+              <h3><span translate="no">{projectData.fullName}</span></h3>
               <p className="team-role">Fondateur & Développeur Principal</p>
               
               <div className="team-bio">
@@ -1351,7 +1419,7 @@ ${formData.message}
             <div className="footer-logo">
               <span className="logo-icon">📄</span>
               <div className="logo-text">
-                <strong>{projectData.name}</strong>
+                <strong><span translate="no">{projectData.name}</span></strong>
                 <small>Une innovation de {projectData.company}</small>
               </div>
             </div>
@@ -1390,7 +1458,7 @@ ${formData.message}
           
           <div className="footer-bottom">
             <div className="copyright">
-              © {new Date().getFullYear()} {projectData.name} par {projectData.fullName}. Tous droits réservés.
+              © {new Date().getFullYear()} <span translate="no">{projectData.name}</span> par <span translate="no">{projectData.fullName}</span>. Tous droits réservés.
             </div>
             
             <div className="footer-contact">
