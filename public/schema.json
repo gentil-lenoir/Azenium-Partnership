@@ -1,0 +1,21 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Numeric-Paper",
+  "operatingSystem": "Web",
+  "applicationCategory": "EventManagementApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Plateforme de création d'événements, d'invitations virtuelles, de cartes digitales et de tickets d'entrée sécurisés utilisant la technologie QR Code avancée.",
+  "author": {
+      "@type": "Person",
+      "name": "GENTIL LE NOIR MALIYAMUNGU BALEGAMIRE"
+  },
+  "publisher": {
+      "@type": "Organization",
+      "name": "Khaleen"
+  }
+}

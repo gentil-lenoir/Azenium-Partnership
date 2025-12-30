@@ -716,8 +716,8 @@ ${formData.message}
               <div className="video-placeholder">
                 <div className="video-label">🎥 Vidéo pour de Démonstration </div>
                 <div className="video-container">
-                  <video src="/vid/Numeric-Paper.webm" controls preload='metadata' className="video"></video>
-                  <a href="/vid/Numeric-Paper.webm" download>Télécharger la vidéo</a>
+                  <video src="/vid/Numeric-Paper.mp4" controls preload='metadata' className="video"></video>
+                  <a href="/vid/Numeric-Paper.mp4" download>Télécharger la vidéo</a>
                 </div>
               </div>
               
@@ -760,7 +760,7 @@ ${formData.message}
             <div className="demo-images">
               <h3>Galerie d'Images</h3>
               <div className="image-grid">
-                {['/favicon.ico', '/img/screenshoots/001.png', '/img/screenshoots/002.png', '/img/screenshoots/003.png'].map(img => (
+                {['/favicon.ico', '/img/screenshoots/001.png', '/img/screenshoots/003.png', '/img/affiche1.png', '/img/affiche2.png', '/img/affiche3.png'].map(img => (
                   // <div key={img} className="image-placeholder">
                     <div>
                       <img src={img} className='img-demo'/>
