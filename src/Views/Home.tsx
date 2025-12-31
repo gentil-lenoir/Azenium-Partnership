@@ -1319,7 +1319,6 @@ ${formData.message}
                   <a href="`https://wa.me/${contactInfo.whatsapp.replace('+', '')}?text=Bonjour%20Je%20viens%20Sponsoriser%20ou%20Acheter%20Numeric-Paper`" target='_blank' className="social-icon-placeholder">WhatsApp</a><br />
                   <a href='https://instagram.com/gentil.lenoir' target='_blank' className="social-icon-placeholder">Instagram</a>
                 </div>
-                <small>Lignes 1520-1525: Insérez vos liens de réseaux sociaux ici</small>
               </div>
             </div>
             
@@ -1408,64 +1407,6 @@ ${formData.message}
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="main-footer">
-        <div className="footer-container">
-          <div className="footer-content">
-            <div className="footer-logo">
-              <span className="logo-icon">📄</span>
-              <div className="logo-text">
-                <strong><span translate="no">{projectData.name}</span></strong>
-                <small>Une innovation de {projectData.company}</small>
-              </div>
-            </div>
-            
-            <div className="footer-links">
-              <div className="link-group">
-                <h4>Navigation</h4>
-                <ul>
-                  <li><button onClick={() => scrollToSection('home')}>Accueil</button></li>
-                  <li><button onClick={() => scrollToSection('features')}>Fonctionnalités</button></li>
-                  <li><button onClick={() => scrollToSection('pricing')}>Tarification</button></li>
-                  <li><button onClick={() => scrollToSection('investment')}>Investissement</button></li>
-                </ul>
-              </div>
-              
-              <div className="link-group">
-                <h4>Ressources</h4>
-                <ul>
-                  <li><a href={contactInfo.portfolioUrl} target="_blank" rel="noopener noreferrer">Portfolio</a></li>
-                  <li><a href={contactInfo.bioUrl} target="_blank" rel="noopener noreferrer">Bio</a></li>
-                  <li><a href={contactInfo.contactsUrl} target="_blank" rel="noopener noreferrer">Contacts Complets</a></li>
-                  <li><a href="#" onClick={(e) => e.preventDefault()}>Documentation Technique</a></li>
-                </ul>
-              </div>
-              
-              <div className="link-group">
-                <h4>Légal</h4>
-                <ul>
-                  <li><a href="#" onClick={(e) => e.preventDefault()}>Conditions d'utilisation</a></li>
-                  <li><a href="#" onClick={(e) => e.preventDefault()}>Politique de confidentialité</a></li>
-                  <li><a href="#" onClick={(e) => e.preventDefault()}>Mentions légales</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className="footer-bottom">
-            <div className="copyright">
-              © {new Date().getFullYear()} <span translate="no">{projectData.name}</span> par <span translate="no">{projectData.fullName}</span>. Tous droits réservés.
-            </div>
-            
-            <div className="footer-contact">
-              <span>Contact rapide: </span>
-              <a href={`mailto:${contactInfo.emails[0]}`}>{contactInfo.emails[0]}</a>
-              <span> | </span>
-              <a href={`tel:${contactInfo.phoneNumbers[0]}`}>{contactInfo.phoneNumbers[0]}</a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
