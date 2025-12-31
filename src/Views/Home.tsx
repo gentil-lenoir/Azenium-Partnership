@@ -257,7 +257,7 @@ const Home: React.FC = () => {
       "default_language": "fr",
       "detect_browser_language": true,
       "wrapper_selector": ".gtranslate_wrapper",
-      "languages": ["fr","en","es","ar","zh"],
+      "languages": ["fr","en","es","ar"],
       "flag_style": "3d"
     };
 
@@ -396,7 +396,7 @@ ${formData.message}
       <nav className="main-nav">
         <div className="nav-container">
           <div className="logo">
-            <span className="logo-icon"><img src="/favicon.ico" alt="" width="40px" /></span>
+            <span className="logo-icon"><img src={selectedTheme === 'dark' ? "/img/Numeric-Paper-white.png" : "/favicon.ico"} alt="" width="40px" /></span>
             <span className="logo-text">
               <strong><span translate="no">NumericPaper</span></strong>
               <small>Pour tes Évenements</small>
@@ -404,7 +404,7 @@ ${formData.message}
           </div>
           
           <ul className="nav-menu">
-            {['home', 'features', 'pricing', 'demo', 'team', 'roadmap', 'investment'].map((item) => (
+            {['home', 'features', 'pricing', 'demo', 'roadmap', 'investment'].map((item) => (
               <li key={item}>
                 <button 
                   className={`nav-link ${activeSection === item ? 'active' : ''}`}
@@ -461,7 +461,7 @@ ${formData.message}
           </div>
           
           <h1 className="hero-title">
-            <span style={{color:'wheat'}}><span translate="no">Numeric-Paper</span></span><br />
+            <span style={{color:'green'}}><span translate="no">Numeric-Paper</span></span><br />
             Nous cherchons un Sponsor ou un Acheteur
           </h1>
           
@@ -903,76 +903,6 @@ ${formData.message}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section Équipe */}
-      <section id="team" className="section team-section">
-        <div className="section-container">
-          <div className="section-header">
-            <h2>L'Équipe <span className="highlight">Fondatrice</span></h2>
-            <p className="section-subtitle">
-              Derrière l'innovation <span translate="no">Numeric-Paper</span>
-            </p>
-          </div>
-          
-          <div className="team-profile">
-            <div className="team-avatar">
-              <div className="avatar-placeholder">
-                <img src="/img/gentil-lenoir.JPG" alt="Photo de Gentil Le NoiR" className="avatar-icon" />
-              </div>
-            </div>
-            
-            <div className="team-info">
-              <h3><span translate="no">{projectData.fullName}</span></h3>
-              <p className="team-role">Fondateur & Développeur Principal</p>
-              
-              <div className="team-bio">
-                <p>
-                  Expert en développement d'applications sécurisées avec plus de 10 ans d'expérience 
-                  dans les technologies web et mobiles. Passionné par l'innovation technologique 
-                  et son application aux défis du marché africain.
-                </p>
-                
-                <div className="team-links">
-                  <a href={contactInfo.bioUrl} target="_blank" rel="noopener noreferrer" className="team-link">
-                    📄 Bio Complète
-                  </a>
-                  <a href={contactInfo.portfolioUrl} target="_blank" rel="noopener noreferrer" className="team-link">
-                    🎨 Portfolio
-                  </a>
-                  <a href={contactInfo.contactsUrl} target="_blank" rel="noopener noreferrer" className="team-link">
-                    📱 Tous les Contacts
-                  </a>
-                </div>
-              </div>
-              
-              <div className="team-expertise">
-                <h4>Expertises Clés</h4>
-                <div className="expertise-tags">
-                  {[
-                    'Développement Full-Stack',
-                    'Sécurité Informatique',
-                    'Informatique',
-                    'Gestion de Projet',
-                    'UI/UX Design'
-                  ].map(skill => (
-                    <span key={skill} className="expertise-tag">{skill}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Contenu étendu sur l'équipe */}
-          <div className="extended-content">
-            <h3>Expérience et Réalisations</h3>
-            {extendedContent.slice(10, 15).map((paragraph, index) => (
-              <p key={index} className="extended-paragraph">
-                {paragraph}
-              </p>
-            ))}
           </div>
         </div>
       </section>
