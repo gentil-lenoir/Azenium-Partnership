@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../Css/Home.css'
+import Header from '../Components/Header';
 import { 
   FaLock, FaCalendarAlt, FaMoneyBillWave, FaPalette, FaChartBar, FaGlobe, 
   FaRocket, FaBullseye, FaLightbulb, FaChartLine, FaCheck, FaSync, 
@@ -400,39 +401,12 @@ ${formData.message}
   return (
     <div className="numeric-paper-container">
       {/* Navigation */}
-      <nav className="main-nav">
-        <div className="nav-container">
-          <div className="logo">
-            <span className="logo-icon"><img src={selectedTheme === 'dark' ? "/img/Numeric-Paper-white.png" : "/favicon.ico"} alt="" width="40px" /></span>
-            <span className="logo-text">
-              <strong><span translate="no">NumericPaper</span></strong>
-              <small>À la recherche de <span style={{color:'white', fontWeight:'bold'}}>Partenaire</span></small>
-            </span>
-          </div>
-          
-          <ul className="nav-menu">
-            {['home', 'features', 'pricing', 'demo', 'roadmap', 'investment'].map((item) => (
-              <li key={item}>
-                <button 
-                  className={`nav-link ${activeSection === item ? 'active' : ''}`}
-                  onClick={() => scrollToSection(item)}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </button>
-              </li>
-            ))}
-          </ul>
-          
-          <div className="nav-cta">
-            <button 
-              className="btn-primary"
-              onClick={() => scrollToSection('contact')}
-            >
-              Devenir Partenaire
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Header 
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+        scrollToSection={scrollToSection}
+        selectedTheme={selectedTheme}
+      />
 
       {/* Language and Theme Selector */}
       <div className="language-selector-container">
@@ -1341,3 +1315,4 @@ const HomeStyles = `
 `;
 
 export default Home;
+
