@@ -54,8 +54,8 @@ interface FAQItem {
 
 // Données du projet
 const projectData = {
-  name: "Numeric-Paper",
-  company: "Numeric-Paper",
+  name: "EventHub",
+  company: "EventHub",
   tagline: "La révolution des invitations virtuelles sécurisées",
   description: "Plateforme de création d'événements, d'invitations virtuelles, de cartes digitales et de tickets d'entrée sécurisés utilisant la technologie QR Code avancée.",
   fullName: "GENTIL LE NOIR MALIYAMUNGU BALEGAMIRE",
@@ -63,9 +63,9 @@ const projectData = {
 
 // Données de contact
 const contactInfo: ContactInfo = {
-  whatsapp: ["+250792871962", "+243978089552"],
-  phoneNumbers: ["+250729606087","+243978089552", "+250792871962"],
-  emails: ["numeric-paper@outlook.com", "gentillenoir075@outlook.com"],
+  whatsapp: ["+243978089552"],
+  phoneNumbers: ["+250729606087","+243978089552"],
+  emails: ["info@eventhub.com", "gentillenoir075@outlook.com"],
   portfolioUrl: "https://gentil-lenoir.vercel.app/portfolio",
 };
 
@@ -186,7 +186,7 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: "Marie Dubois",
     role: "Organisatrice de mariage",
-    content: "Numeric-Paper a révolutionné ma façon d'organiser des événements. La sécurité des invitations est impeccable et mes clients adorent l'aspect moderne.",
+    content: "EventHub a révolutionné ma façon d'organiser des événements. La sécurité des invitations est impeccable et mes clients adorent l'aspect moderne.",
     rating: 5
   },
   {
@@ -251,7 +251,7 @@ const Home: React.FC = () => {
   
   // Theme state - default to dark theme
   const [selectedTheme, setSelectedTheme] = useState<string>(() => {
-    const savedTheme = localStorage.getItem('numeric-paper-theme');
+    const savedTheme = localStorage.getItem('eventhub-theme');
     return savedTheme || 'dark';
   });
   
@@ -282,7 +282,7 @@ const Home: React.FC = () => {
 
   // Theme change effect - apply theme class and save to localStorage
   useEffect(() => {
-    localStorage.setItem('numeric-paper-theme', selectedTheme);
+    localStorage.setItem('eventhub-theme', selectedTheme);
     document.body.className = selectedTheme === 'light' ? 'light-theme' : 'dark-theme';
     console.log('Theme applied:', selectedTheme);
   }, [selectedTheme]);
@@ -316,7 +316,7 @@ const Home: React.FC = () => {
     e.preventDefault();
     
     // Créer le message pour WhatsApp
-    const message = `🌟 NOUVELLE DEMANDE DE PARTENARIAT NUMERIC-PAPER 🌟
+    const message = `🌟 NOUVELLE DEMANDE DE PARTENARIAT EVENTHUB 🌟
 
 👤 Nom: ${formData.name}
 📧 Email: ${formData.email}
@@ -401,7 +401,7 @@ ${formData.message}
   const extendedContent = generateExtendedContent();
 
   return (
-    <div className="numeric-paper-container">
+    <div className="eventhub-container">
       {/* Navigation */}
       <Header 
         activeSection={activeSection}
@@ -444,7 +444,7 @@ ${formData.message}
           </div>
           
           <h1 className="hero-title">
-            <span style={{color:'green'}}><span translate="no">Numeric-Paper</span></span><br />
+            <span style={{color:'green'}}><span translate="no">EventHub</span></span><br />
             Nous cherchons un Partenaire Stratégique ou Investisseur !
           </h1>
           
@@ -456,9 +456,9 @@ ${formData.message}
 
           <div style={{display:'flex', justifyContent:'space-around'}}>
             <div></div>
-            <a href='https://numeric-paper.com/princing' target='_blank' className='feature-tag' style={{fontWeight:'bold', textDecoration:'none'}}>Principes <span translate='no'>Numeric-Paper</span></a>
+            <a href='https://eventhub.com/princing' target='_blank' className='feature-tag' style={{fontWeight:'bold', textDecoration:'none'}}>Principes <span translate='no'>EventHub</span></a>
             <button onClick={() => scrollToSection('contact')} className='feature-tag' style={{fontWeight:'bold'}}>Contacts</button>
-            <a href='https://numeric-paper.com' target='_blank' className='feature-tag' style={{fontWeight:'bold', textDecoration:'none'}}>Visiter le site</a>
+            <a href='https://eventhub.com' target='_blank' className='feature-tag' style={{fontWeight:'bold', textDecoration:'none'}}>Visiter le site</a>
             <div></div>
           </div>
           
@@ -510,7 +510,7 @@ ${formData.message}
       <section id="project" className="section project-section">
         <div className="section-container">
           <div className="section-header">
-            <h2>Le Projet <span className="highlight"><span translate="no">Numeric-Paper</span></span></h2>
+            <h2>Le Projet <span className="highlight"><span translate="no">EventHub</span></span></h2>
             <p className="section-subtitle">
               Une solution complète de gestion d'événements et d'invitations virtuelles sécurisées
             </p>
@@ -518,9 +518,9 @@ ${formData.message}
           
           <div className="project-details">
             <div className="project-description">
-              <h3>Qu'est-ce que <span translate="no">Numeric-Paper</span> ?</h3>
+              <h3>Qu'est-ce que <span translate="no">EventHub</span> ?</h3>
               <p>
-                <span translate="no">Numeric-Paper</span> est une plateforme innovante qui permet la création d'événements virtuels et hybrides 
+                <span translate="no">EventHub</span> est une plateforme innovante qui permet la création d'événements virtuels et hybrides 
                 avec des invitations digitales sécurisées utilisant la technologie QR Code avancée. 
                 Contrairement aux solutions traditionnelles, nos invitations sont impossibles à copier ou falsifier, 
                 offrant un niveau de sécurité inégalé pour tout type d'événement.
@@ -626,14 +626,14 @@ ${formData.message}
           <div className="extended-content">
             <h3>Technologie Sous-jacente</h3>
             <p style={{textAlign:'justify'}}>
-              <strong translate='no'>Numeric-Paper</strong> représente une innovation majeure dans le domaine de la gestion d'événements et des invitations digitales. 
+              <strong translate='no'>EventHub</strong> représente une innovation majeure dans le domaine de la gestion d'événements et des invitations digitales. 
               Notre plateforme combine sécurité avancée, facilité d'utilisation et design moderne pour offrir une expérience unique 
               aux organisateurs et participants d'événements. Dans un monde de plus en plus digital, la nécessité de solutions sécurisées 
               pour la gestion des accès aux événements n'a jamais été aussi critique. Les méthodes traditionnelles d'invitation papier 
               présentent de nombreuses limitations : coûts élevés, impact environnemental, risque de contrefaçon, et manque de flexibilité. <br /> <br />
                     
-              L'équipe derrière <strong translate='no'>Numeric-Paper</strong> possède une expertise approfondie dans les technologies blockchain, la cryptographie 
-              et le développement d'applications sécurisées. Notre Entreprise, <strong translate='no' style={{color:'blueviolet'}}>Numeric-Paper</strong>, aumoins 3 ans d'expérience 
+              L'équipe derrière <strong translate='no'>EventHub</strong> possède une expertise approfondie dans les technologies blockchain, la cryptographie 
+              et le développement d'applications sécurisées. Notre Entreprise, <strong translate='no' style={{color:'blueviolet'}}>EventHub</strong>, aumoins 3 ans d'expérience 
               dans le développement de solutions digitales innovantes pour le marché africain et international. Son portfolio comprend 
               plusieurs applications à succès dans les domaines de la finance digitale, de l'e-commerce et des technologies mobiles. <br /> <br />
                             
@@ -647,14 +647,14 @@ ${formData.message}
               partenariats stratégiques avec des entreprises technologiques leaders. Nous sommes ouverts à diverses formes de 
               collaboration, qu'il s'agisse d'un investissement en capital, d'un partenariat stratégique, ou d'une acquisition. <br /> <br />
               
-              La technologie derrière <strong translate='no'>Numeric-Paper</strong> a été rigoureusement testée et validée dans des conditions réelles. 
+              La technologie derrière <strong translate='no'>EventHub</strong> a été rigoureusement testée et validée dans des conditions réelles. 
               Nous avons mené des tests bêta avec plusieurs organisateurs d'événements en test, obtenant un taux de satisfaction de 94%. 
               Les retours des utilisateurs ont été extrêmement positifs, avec des éloges particuliers pour la facilité d'utilisation, 
               la fiabilité du système, et la qualité du support client.
             </p>
 
             <p style={{textAlign:'justify'}}>
-              En termes de différenciation concurrentielle, <strong translate='no'>Numeric-Paper</strong> offre plusieurs avantages uniques : 
+              En termes de différenciation concurrentielle, <strong translate='no'>EventHub</strong> offre plusieurs avantages uniques : 
             </p>
 
             <ol>
@@ -684,52 +684,8 @@ ${formData.message}
         </div>
       </section>
 
-      {/* Section Démo et Media */}
-      <section id="demo" className="section demo-section">
-        <div className="section-container">
-          <div className="section-header">
-            <h2>Démonstration <span className="highlight">Visuelle</span></h2>
-            <p className="section-subtitle">
-              Découvrez <span translate="no">Numeric-Paper</span> en action
-            </p>
-          </div>
-          
-          <div className="demo-content">
-            <div className="demo-videos">
-              <div className="video-placeholder">
-                <div className="video-label"><FaVideo style={{ display: 'inline', marginRight: '5px' }} /> Vidéo pour de Démonstration </div>
-                <div className="video-container">
-                  <video src="/vid/Numeric-Paper.mp4" controls preload='metadata' className="video"></video>
-                  <a className='download-link' href="/vid/Numeric-Paper.mp4" download><FaDownload/> Télécharger la vidéo</a>
-                </div>
-              </div>
-              
-              <div className="video-placeholder">
-                <div className="video-label"><FaVideo style={{ display: 'inline', marginRight: '5px' }} /> Vidéo de <span>Gentil Le NoiR</span></div>
-                <div className="video-container">
-                  <video src="/vid/Video-NumericPaper-Pr-COMPRESSED.mp4" controls preload="metadata" className="video"></video>
-                  <a className='download-link' href="/vid/Video-NumericPaper-Pr-COMPRESSED.mp4" download><FaDownload /> Télécharger la vidéo</a>
-                </div>
-              </div>
-            </div>
-                        
-            <div className="demo-images">
-              <h3>Galerie d'Images</h3><br />
-              <div className="image-grid">
-                {['/img/Image-logo-numericpaper.png', '/img/screenshoots/001.png', '/img/screenshoots/003.png', '/img/affiche2.png', '/img/affiche3.png'].map(img => (
-                  // <div key={img} className="image-placeholder">
-                    <div key={img}>
-                      <img src={img} className='img-demo'/>
-                    </div>
-                  // </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Section Tarification */}
+{/*
       <section id="pricing" className="section pricing-section" ref={pricingRef}>
         <div className="section-container">
           <div className="section-header">
@@ -840,7 +796,6 @@ ${formData.message}
             </div>
           </div>
           
-          {/* Contenu étendu sur la monétisation */}
           <div className="extended-content">
             <h3>Stratégie de Monétisation Avancée</h3>
             {extendedContent.slice(5, 10).map((paragraph, index) => (
@@ -877,6 +832,7 @@ ${formData.message}
           </div>
         </div>
       </section>
+*/}
 
       {/* Section Roadmap */}
       <section id="roadmap" className="section roadmap-section">
@@ -1141,7 +1097,7 @@ ${formData.message}
                     {contactInfo.whatsapp.map((number, index) => (
                       <a 
                         key={index}
-                        href={`https://wa.me/${number.replace('+', '')}?text=Bonjour%20Je%20viens%20de%20voir%20Numeric-Paper`}
+                        href={`https://wa.me/${number.replace('+', '')}?text=Bonjour%20Je%20viens%20de%20voir%20EventHub`}
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="contact-link"
@@ -1189,7 +1145,7 @@ ${formData.message}
                   <div className="method-content">
                     <h4>Site Web</h4>
                     <a 
-                      href="https://numeric-paper.com"
+                      href="https://eventhub.com"
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="contact-link"
@@ -1197,7 +1153,7 @@ ${formData.message}
                       Accueil
                     </a>
                     <a 
-                      href="https://numeric-paper.com/register"
+                      href="https://eventhub.com/register"
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="contact-link"
@@ -1205,7 +1161,7 @@ ${formData.message}
                       S'inscrire
                     </a>
                     <a 
-                      href="https://numeric-paper.com/about"
+                      href="https://eventhub.com/about"
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="contact-link"
@@ -1220,7 +1176,7 @@ ${formData.message}
                 <h4><FaGlobe style={{fontSize:'1rem'}}/> Réseaux Sociaux</h4>
                 <div className="social-icons-placeholder">
                   {/* Espaces pour les réseaux sociaux */}
-                  <a href='https://linkedin.com/company/numeric-paper' target='_blank' className="contact-link" style={{textIndent:'15px'}}><FaLinkedin /> LinkedIn</a>
+                  <a href='https://linkedin.com/company/eventhub' target='_blank' className="contact-link" style={{textIndent:'15px'}}><FaLinkedin /> LinkedIn</a>
                   <a href='https://www.facebook.com/share/1C1MACYWdK/?mibextid=wwXIfr' target='_blank' style={{textIndent:'15px'}} className="contact-link"><FaFacebook /> FaceBook</a>
                   <a href='https://chat.whatsapp.com/HXge11ByhzC4yrbhlExW6D' target='_blank' style={{textIndent:'15px'}} className="contact-link"><FaWhatsapp /> WhatsApp</a>
                 </div>
@@ -1294,7 +1250,7 @@ ${formData.message}
                       value={formData.message}
                       onChange={handleInputChange}
                       required
-                      placeholder="Décrivez votre intérêt pour Numeric-Paper, votre proposition, ou posez vos questions..."
+                      placeholder="Décrivez votre intérêt pour EventHub, votre proposition, ou posez vos questions..."
                       rows={6}
                     />
                   </div>
@@ -1312,8 +1268,8 @@ ${formData.message}
         </div>
       </section>
 
-      {/* Footer avec liens vers numeric-paper.com */}
-      <footer className="numeric-paper-footer">
+      {/* Footer avec liens vers eventhub.com */}
+      <footer className="eventhub-footer">
         <div className="footer-container">
           <div className="footer-main">
             {/* Logo et description */}
@@ -1322,7 +1278,7 @@ ${formData.message}
                 Plateforme de création d'événements, d'invitations virtuelles et de tickets d'entrée sécurisés utilisant la technologie QR Code avancée.
               </p>
               <div className="footer-social">
-                <a href="https://linkedin.com/company/numeric-paper" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+                <a href="https://linkedin.com/company/eventhub" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
                 <a href="https://www.facebook.com/share/1C1MACYWdK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-link">Facebook</a>
                 <a href="https://chat.whatsapp.com/HXge11ByhzC4yrbhlExW6D" target="_blank" rel="noopener noreferrer" className="social-link">WhatsApp</a>
               </div>
@@ -1332,10 +1288,10 @@ ${formData.message}
             <div className="footer-links-section">
               <h4>Liens Rapides</h4>
               <ul className="footer-links">
-                <li><a href="https://numeric-paper.com/create" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Créer un événement</a></li>
-                <li><a href="https://numeric-paper.com/events" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Mes événements</a></li>
-                <li><a href="https://numeric-paper.com/about" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> À propos</a></li>
-                <li><a href="https://numeric-paper.com/support" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Support</a></li>
+                <li><a href="https://eventhub.com/create" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Créer un événement</a></li>
+                <li><a href="https://eventhub.com/events" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Mes événements</a></li>
+                <li><a href="https://eventhub.com/about" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> À propos</a></li>
+                <li><a href="https://eventhub.com/support" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Support</a></li>
               </ul>
             </div>
 
@@ -1343,10 +1299,10 @@ ${formData.message}
             <div className="footer-links-section">
               <h4>Légal</h4>
               <ul className="footer-links">
-                <li><a href="https://numeric-paper.com/privacy" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Politique de confidentialité</a></li>
-                <li><a href="https://numeric-paper.com/legal" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Mentions légales</a></li>
-                <li><a href="https://numeric-paper.com/terms" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Conditions d'utilisation</a></li>
-                <li><a href="https://numeric-paper.com/contact" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Nous contacter</a></li>
+                <li><a href="https://eventhub.com/privacy" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Politique de confidentialité</a></li>
+                <li><a href="https://eventhub.com/legal" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Mentions légales</a></li>
+                <li><a href="https://eventhub.com/terms" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Conditions d'utilisation</a></li>
+                <li><a href="https://eventhub.com/contact" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Nous contacter</a></li>
               </ul>
             </div>
 
@@ -1355,23 +1311,23 @@ ${formData.message}
               <h4>Contactez-nous</h4>
               <div className="footer-contact-item">
                 <FaEnvelope />
-                <a href="mailto:numeric-paper@outlook.com">numeric-paper@outlook.com</a>
+                <a href="mailto:info@eventhub.com">info@eventhub.com</a>
               </div>
               <div className="footer-contact-item">
                 <FaWhatsapp />
-                <a href="https://wa.me/250792871952?text=Bonjour%20Je%20viens%20de%20voir%20Numeric-Paper" target="_blank" rel="noopener noreferrer">+250 792 871 952</a>
+                <a href="https://wa.me/250792871952?text=Bonjour%20Je%20viens%20de%20voir%20EventHub" target="_blank" rel="noopener noreferrer">+243 978 089 552</a>
               </div>
-              <a href="https://numeric-paper.com" target="_blank" rel="noopener noreferrer" className="footer-site-link">
-                <FaGlobe /> Visitez numeric-paper.com
+              <a href="https://eventhub.com" target="_blank" rel="noopener noreferrer" className="footer-site-link">
+                <FaGlobe /> Visitez eventhub.com
               </a>
             </div>
           </div>
 
           {/* Copyright */}
           <div className="footer-bottom">
-            <p>&copy; 2026 <span translate="no">Numeric-Paper</span>. Tous droits réservés.</p>
+            <p>&copy; 2026 <span translate="no">EventHub</span>. Tous droits réservés.</p>
             <p className="footer-powered">
-              Propulsé par <a href="https://numeric-paper.com" target="_blank" rel="noopener noreferrer"><span translate="no">Numeric-Paper</span> <FaCrown style={{fontSize:'0.8em'}} /></a>
+              Propulsé par <a href="https://eventhub.com" target="_blank" rel="noopener noreferrer"><span translate="no">EventHub</span> <FaCrown style={{fontSize:'0.8em'}} /></a>
             </p>
           </div>
         </div>

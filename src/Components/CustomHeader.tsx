@@ -20,16 +20,16 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({ selectedTheme = 'dark' }) =
       <div className="custom-header-container">
         {/* Logo */}
         <div className="custom-logo">
-          <a href="https://numeric-paper.com" target="_blank" rel="noopener noreferrer" className="custom-logo-link">
+          <a href="https://eventhub.com" target="_blank" rel="noopener noreferrer" className="custom-logo-link">
             <span className="custom-logo-icon">
               <img 
-                src={selectedTheme === 'dark' ? "/img/Numeric-Paper-white.png" : "/favicon.ico"} 
-                alt="Numeric-Paper" 
+                src={selectedTheme === 'dark' ? "/img/EventHub-white.png" : "/favicon.ico"} 
+                alt="EventHub" 
                 width="40px" 
               />
             </span>
             <div className="custom-logo-text">
-              <strong><span translate="no">Numeric-Paper</span></strong>
+              <strong><span translate="no">EventHub</span></strong>
               <small>Promo Agent</small>
             </div>
           </a>

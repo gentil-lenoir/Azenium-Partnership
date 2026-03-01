@@ -1,8 +1,8 @@
-# Numeric-Paper 🚀
+# EventHub 🚀
 
 ## La révolution des invitations virtuelles sécurisées
 
-Numeric-Paper est une plateforme innovative de création d'événements, d'invitations virtuelles, de cartes digitales et de tickets d'entrée sécurisés utilisant la technologie QR Code avancée.
+EventHub est une plateforme innovative de création d'événements, d'invitations virtuelles, de cartes digitales et de tickets d'entrée sécurisés utilisant la technologie QR Code avancée.
 
 ---
 
@@ -22,7 +22,7 @@ Numeric-Paper est une plateforme innovative de création d'événements, d'invit
 
 ## 🎯 À propos
 
-Numeric-Paper révolutionne la gestion d'événements en proposant des invitations digitales **impossibles à copier ou falsifier**. Notre technologie propriétaire génère des QR Codes uniques et temporaires, offrant un niveau de sécurité inégalé pour tout type d'événement.
+EventHub révolutionne la gestion d'événements en proposant des invitations digitales **impossibles à copier ou falsifier**. Notre technologie propriétaire génère des QR Codes uniques et temporaires, offrant un niveau de sécurité inégalé pour tout type d'événement.
 
 ### 🎪 Cibles du marché
 
@@ -122,8 +122,8 @@ Numeric-Paper révolutionne la gestion d'événements en proposant des invitatio
 
 ```bash
 # Cloner le repository
-git clone https://github.com/gentil-lenoir/numeric-paper.git
-cd numeric-paper
+git clone https://github.com/gentil-lenoir/eventhub.git
+cd eventhub
 
 # Installer les dépendances frontend
 npm install
@@ -206,7 +206,7 @@ const totalPrice = guests * tier.pricePerInvite;
 
 ### Téléphones
 📞 **+250729606087**  
-📞 **+250792871962**
+📞 **+243978089552**
 
 ### Liens
 🌐 **[Portfolio](https://gentil-lenoir.vercel.app/portfolio)**  
@@ -291,16 +291,16 @@ Ce projet est sous licence propriétaire. Voir le fichier [LICENCE](LICENCE) pou
 
 ## 🙏 Remerciements
 
-Merci à tous les testeurs beta qui ont contribué au développement de Numeric-Paper avec leurs retours précieux.
+Merci à tous les testeurs beta qui ont contribué au développement de EventHub avec leurs retours précieux.
 
 ---
 
 ## 📞 Contact pour Partenariat
 
-**Vous êtes intéressé par Numeric-Paper ?**
+**Vous êtes intéressé par EventHub ?**
 
 Contactez-nous via :
-- 📱 **WhatsApp**: [+243978089552](https://wa.me/243978089552?text=Bonjour%20Je%20viens%20Sponsoriser%20ou%20Acheter%20Numeric-Paper)
+- 📱 **WhatsApp**: [+243978089552](https://wa.me/243978089552?text=Bonjour%20Je%20viens%20Sponsoriser%20ou%20Acheter%20EventHub)
 - ✉️ **Email**: gentillenoir075@gmail.com
 
 *Nous respondons à tous les messages dans les 24 heures.*
@@ -309,7 +309,7 @@ Contactez-nous via :
 
 <div align="center">
 
-**🚀 Numeric-Paper - La sécurité des événements à l'ère numérique**
+**🚀 EventHub - La sécurité des événements à l'ère numérique**
 
 *Développé avec ❤️ par Gentil Le Noir*
 

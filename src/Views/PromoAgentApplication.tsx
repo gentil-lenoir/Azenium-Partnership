@@ -58,13 +58,13 @@ const PromoAgentApplication: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [formStep, setFormStep] = useState(1);
   const [selectedTheme, setSelectedTheme] = useState<string>(() => {
-    const savedTheme = localStorage.getItem('numeric-paper-theme');
+    const savedTheme = localStorage.getItem('eventhub-theme');
     return savedTheme || 'dark';
   });
 
   // Theme change effect
   useEffect(() => {
-    localStorage.setItem('numeric-paper-theme', selectedTheme);
+    localStorage.setItem('eventhub-theme', selectedTheme);
     document.body.className = selectedTheme === 'light' ? 'light-theme' : 'dark-theme';
   }, [selectedTheme]);
 
@@ -412,7 +412,7 @@ const PromoAgentApplication: React.FC = () => {
             
             <div className="form-group-promo">
               <label htmlFor="motivation">
-                Pourquoi voulez-vous devenir Agent <strong translate='no'>Numeric-Paper</strong> ?
+                Pourquoi voulez-vous devenir Agent <strong translate='no'>EventHub</strong> ?
               </label>
               <textarea
                 id="motivation"
@@ -425,7 +425,7 @@ const PromoAgentApplication: React.FC = () => {
 • Votre expérience dans la vente ou le marketing
 • Votre réseau et comment vous comptez l'utiliser
 • Vos objectifs financiers
-• Ce qui vous motive particulièrement chez Numeric-Paper
+• Ce qui vous motive particulièrement chez EventHub
 • Vos idées pour promouvoir nos services`}
                 rows={8}
                 className="form-textarea-promo"
@@ -546,10 +546,10 @@ const PromoAgentApplication: React.FC = () => {
           <div className="footer-content">
             <div className="footer-logo">
               <FaCrown />
-              <span translate='no'>Numeric-Paper Promo</span>
+              <span translate='no'>EventHub Promo</span>
             </div>
             <p className="footer-copyright">
-              © 2026 <strong>Numeric-Paper</strong>. Tous droits réservés.
+              © 2026 <strong>EventHub</strong>. Tous droits réservés.
             </p>
           </div>
         </footer>
@@ -621,8 +621,8 @@ const PromoAgentApplication: React.FC = () => {
         {formContent}
       </div>
 
-      {/* Footer avec liens vers numeric-paper.com */}
-      <footer className="numeric-paper-footer">
+      {/* Footer avec liens vers eventhub.com */}
+      <footer className="eventhub-footer">
         <div className="footer-container">
           <div className="footer-main">
             {/* Logo et description */}
@@ -632,7 +632,7 @@ const PromoAgentApplication: React.FC = () => {
                 la meilleure plateforme d'invitations virtuelles sécurisées.
               </p>
               <div className="footer-social">
-                <a href="https://linkedin.com/company/numeric-paper" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+                <a href="https://linkedin.com/company/eventhub" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
                 <a href="https://www.facebook.com/share/1C1MACYWdK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-link">Facebook</a>
                 <a href="https://chat.whatsapp.com/HXge11ByhzC4yrbhlExW6D" target="_blank" rel="noopener noreferrer" className="social-link">WhatsApp</a>
               </div>
@@ -642,10 +642,10 @@ const PromoAgentApplication: React.FC = () => {
             <div className="footer-links-section">
               <h4>Liens Rapides</h4>
               <ul className="footer-links">
-                <li><a href="https://numeric-paper.com/create" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Créer un événement</a></li>
-                <li><a href="https://numeric-paper.com/events" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Mes événements</a></li>
-                <li><a href="https://numeric-paper.com/about" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> À propos</a></li>
-                <li><a href="https://numeric-paper.com/support" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Support</a></li>
+                <li><a href="https://eventhub.com/create" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Créer un événement</a></li>
+                <li><a href="https://eventhub.com/events" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Mes événements</a></li>
+                <li><a href="https://eventhub.com/about" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> À propos</a></li>
+                <li><a href="https://eventhub.com/support" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Support</a></li>
               </ul>
             </div>
 
@@ -653,10 +653,10 @@ const PromoAgentApplication: React.FC = () => {
             <div className="footer-links-section">
               <h4>Légal</h4>
               <ul className="footer-links">
-                <li><a href="https://numeric-paper.com/privacy" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Politique de confidentialité</a></li>
-                <li><a href="https://numeric-paper.com/legal" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Mentions légales</a></li>
-                <li><a href="https://numeric-paper.com/terms" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Conditions d'utilisation</a></li>
-                <li><a href="https://numeric-paper.com/contact" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Nous contacter</a></li>
+                <li><a href="https://eventhub.com/privacy" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Politique de confidentialité</a></li>
+                <li><a href="https://eventhub.com/legal" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Mentions légales</a></li>
+                <li><a href="https://eventhub.com/terms" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Conditions d'utilisation</a></li>
+                <li><a href="https://eventhub.com/contact" target="_blank" rel="noopener noreferrer"><FaExternalLinkAlt /> Nous contacter</a></li>
               </ul>
             </div>
 
@@ -665,23 +665,23 @@ const PromoAgentApplication: React.FC = () => {
               <h4>Contactez-nous</h4>
               <div className="footer-contact-item">
                 <FaEnvelope />
-                <a href="mailto:numeric-paper@outlook.com">numeric-paper@outlook.com</a>
+                <a href="mailto:info@eventhub.com">info@eventhub.com</a>
               </div>
               <div className="footer-contact-item">
                 <FaWhatsapp />
-                <a href="https://wa.me/250792871952?text=Bonjour%20Je%20viens%20de%20voir%20Numeric-Paper" target="_blank" rel="noopener noreferrer">+250 792 871 952</a>
+                <a href="https://wa.me/250792871952?text=Bonjour%20Je%20viens%20de%20voir%20EventHub" target="_blank" rel="noopener noreferrer">+243 978 089 552</a>
               </div>
-              <a href="https://numeric-paper.com" target="_blank" rel="noopener noreferrer" className="footer-site-link">
-                <FaGlobe /> Visitez numeric-paper.com
+              <a href="https://eventhub.com" target="_blank" rel="noopener noreferrer" className="footer-site-link">
+                <FaGlobe /> Visitez eventhub.com
               </a>
             </div>
           </div>
 
           {/* Copyright */}
           <div className="footer-bottom">
-            <p>&copy; 2026 <span translate="no">Numeric-Paper</span>. Tous droits réservés.</p>
+            <p>&copy; 2026 <span translate="no">EventHub</span>. Tous droits réservés.</p>
             <p className="footer-powered">
-              Propulsé par <a href="https://numeric-paper.com" target="_blank" rel="noopener noreferrer"><span translate="no">Numeric-Paper</span> <FaCrown style={{fontSize:'0.8em'}} /></a>
+              Propulsé par <a href="https://eventhub.com" target="_blank" rel="noopener noreferrer"><span translate="no">EventHub</span> <FaCrown style={{fontSize:'0.8em'}} /></a>
             </p>
           </div>
         </div>
