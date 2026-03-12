@@ -181,6 +181,60 @@ const timelineItems: TimelineItem[] = [
   }
 ];
 
+// Galerie d'événements et festivals
+interface GalleryEvent {
+  id: number;
+  title: string;
+  category: string;
+  imageUrl: string;
+  externalUrl: string;
+}
+
+const galleryEvents: GalleryEvent[] = [
+  {
+    id: 1,
+    title: "Mariage Élégant",
+    category: "Mariage",
+    imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop",
+    externalUrl: "https://azenium.com/events/wedding"
+  },
+  {
+    id: 2,
+    title: "Festival de Musique",
+    category: "Festival",
+    imageUrl: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&h=300&fit=crop",
+    externalUrl: "https://azenium.com/events/music-festival"
+  },
+  {
+    id: 3,
+    title: "Conférence Tech",
+    category: "Conférence",
+    imageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop",
+    externalUrl: "https://azenium.com/events/conference"
+  },
+  {
+    id: 4,
+    title: "Anniversaire Festif",
+    category: "Anniversaire",
+    imageUrl: "https://images.unsplash.com/photo-1530103862676-de3c9a59af38?w=400&h=300&fit=crop",
+    externalUrl: "https://azenium.com/events/birthday"
+  },
+  {
+    id: 5,
+    title: "Événement Corporate",
+    category: "Entreprise",
+    imageUrl: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=300&fit=crop",
+    externalUrl: "https://azenium.com/events/corporate"
+  },
+  {
+    id: 6,
+    title: "Soirée Gala",
+    category: "Gala",
+    imageUrl: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+    externalUrl: "https://azenium.com/events/gala"
+  }
+];
+
 // Composant principal
 const Home: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>('home');
@@ -408,7 +462,6 @@ ${formData.message}`;
               className="hero-video"
               controls 
               preload="metadata"
-              poster="/img/images/partnership-image.jpg"
             >
               <source src="/video/azenium-homepage.mp4" type="video/mp4" />
               Votre navigateur ne supporte pas la vidéo.
@@ -539,10 +592,31 @@ ${formData.message}`;
             </div>
             <div className="project-logos">
               <h4 className="project-logos-title">Galerie</h4>
+              <p className="project-logos-subtitle">Découvrez quelques-uns des événements que vous pouvez organiser avec Azenium</p>
               <div className="project-logos-grid">
-                <img src="/img/long-logo.jpeg" alt="Logo Azenium" className="project-logo" />
-                <img src="/img/general-logo.png" alt="General Logo" className="project-logo" />
-                <img src="/img/azeni_um_logo_transparent.png" alt="Azenium Logo" className="project-logo" />
+                {galleryEvents.map(event => (
+                  <a 
+                    key={event.id} 
+                    href={event.externalUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="gallery-event-card"
+                    title={`Voir ${event.title}`}
+                  >
+                    <img 
+                      src={event.imageUrl} 
+                      alt={event.title} 
+                      className="gallery-event-image"
+                    />
+                    <div className="gallery-event-overlay">
+                      <span className="gallery-event-category">{event.category}</span>
+                      <span className="gallery-event-title">{event.title}</span>
+                      <span className="gallery-event-link">
+                        <FaExternalLinkAlt /> Découvrir
+                      </span>
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -947,17 +1021,6 @@ ${formData.message}`;
                 Plateforme d'invitations virtuelles sécurisées avec technologie QR Code avancée.
                 La solution parfaite pour vos événements.
               </p>
-              
-              {/* Media Gallery */}
-              <div className="footer-media-gallery">
-                <img src="/img/long-logo.jpeg" alt="Long Logo" className="footer-media-logo" />
-                <img src="/img/general-logo.png" alt="General Logo" className="footer-media-logo" />
-                <img src="/img/images/partnership-image.jpg" alt="image de partenariat" className="footer-media-affiche" />
-                <video className="footer-media-video" controls preload="metadata">
-                  <source src="/video/azenium-homepage.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la vidéo.
-                </video>
-              </div>
             </div>
             
             {/* Quick Links */}
