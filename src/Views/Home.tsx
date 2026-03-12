@@ -9,7 +9,7 @@ import {
   FaUserTie, FaPercent, FaCrown, FaExternalLinkAlt, FaLinkedin, FaFacebook,
   FaArrowRight, FaPlay, FaAward, FaUsers, FaShieldAlt, FaClock, FaCheckCircle,
   FaArrowUp, FaChartPie, FaQrcode, FaTicketAlt, FaBolt, FaStar, FaPaperPlane,
-  FaTwitter, FaPinterest
+  FaTwitter, FaPinterest, FaLaptopCode, FaMobileAlt, FaCloud, FaDatabase
 } from 'react-icons/fa';
 
 // Types et interfaces
@@ -347,8 +347,9 @@ ${formData.message}`;
         {/* Background Effects */}
         <div className="hero-bg">
           <div className="hero-grid"></div>
-          <div className="hero-float hero-float-1"></div>
-          <div className="hero-float hero-float-2"></div>
+          <div className="hero-orb hero-orb-1"></div>
+          <div className="hero-orb hero-orb-2"></div>
+          <div className="hero-orb hero-orb-3"></div>
         </div>
         
         <div className="hero-content">
@@ -358,16 +359,17 @@ ${formData.message}`;
             <span><FaRocket style={{ marginRight: '6px' }} /> Innovation Technologique</span>
           </div>
           
-          {/* Title */}
-          <h1 className="hero-title">
+          {/* Logo */}
+          <div className="hero-logo">
             <img 
               src="/img/azeni_um_logo_transparent.png" 
               alt="Logo Azenium" 
-              title="Logo Azenium" 
-              height="70px" 
-              style={{ marginBottom: '1rem' }}
+              title="Logo Azenium"
             />
-            <br />
+          </div>
+          
+          {/* Title */}
+          <h1 className="hero-title">
             Recherchons un <span className="highlight">Partenaire Stratégique</span>
           </h1>
           
@@ -549,19 +551,13 @@ ${formData.message}`;
             ))}
           </div>
           
-          {/* Extended Content */}
-          <div style={{ 
-            marginTop: '4rem', 
-            padding: '2.5rem', 
-            background: 'var(--bg-card)', 
-            borderRadius: 'var(--radius-xl)',
-            border: '1px solid var(--border-color)'
-          }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', textAlign: 'center' }}>
-              <FaBolt style={{ color: 'var(--primary-500)', marginRight: '0.5rem' }} />
+          {/* Tech Stack Box */}
+          <div className="tech-box">
+            <h3>
+              <FaBolt />
               Technologie de Pointe
             </h3>
-            <p style={{ textAlign: 'justify', lineHeight: '1.8', color: 'var(--text-secondary)' }}>
+            <p style={{ textAlign: 'justify', lineHeight: '1.8', color: 'var(--text-secondary)', maxWidth: '800px', margin: '0 auto 2rem' }}>
               <strong>Azenium</strong> représente une innovation majeure dans le domaine de la gestion d'événements. 
               Notre plateforme combine <strong>sécurité avancée</strong>, <strong>facilité d'utilisation</strong> et 
               <strong> design moderne</strong> pour offrir une expérience unique. L'équipe possède une expertise 
@@ -569,22 +565,9 @@ ${formData.message}`;
               algorithme propriétaire de génération de QR Codes qui rend toute falsification impossible.
             </p>
             
-            <div style={{ 
-              display: 'flex', 
-              gap: '1rem', 
-              flexWrap: 'wrap', 
-              justifyContent: 'center',
-              marginTop: '1.5rem'
-            }}>
+            <div className="tech-stack">
               {['Laravel', 'TypeScript', 'Node.js', 'MySQL', 'React.js', 'React Native'].map(tech => (
-                <span key={tech} style={{
-                  padding: '0.5rem 1rem',
-                  background: 'rgba(59, 130, 246, 0.1)',
-                  border: '1px solid rgba(59, 130, 246, 0.2)',
-                  borderRadius: 'var(--radius-full)',
-                  fontSize: '0.875rem',
-                  color: 'var(--primary-500)'
-                }}>{tech}</span>
+                <span key={tech} className="tech-tag">{tech}</span>
               ))}
             </div>
           </div>
@@ -607,10 +590,10 @@ ${formData.message}`;
           <div className="roadmap-timeline">
             {timelineItems.map((item) => (
               <div key={item.id} className="timeline-item">
-                <div className={`timeline-marker ${item.status}`}>
-                  {item.status === 'completed' && <FaCheckCircle size={12} />}
-                  {item.status === 'current' && <FaClock size={12} />}
-                  {item.status === 'future' && <FaCircle size={10} />}
+                <div className={`timeline-dot ${item.status}`}>
+                  {item.status === 'completed' && <FaCheckCircle size={10} />}
+                  {item.status === 'current' && <FaClock size={10} />}
+                  {item.status === 'future' && <FaCircle size={8} />}
                 </div>
                 <div className="timeline-content">
                   <div className="timeline-date">{item.date}</div>
@@ -927,12 +910,22 @@ ${formData.message}`;
             {/* Brand */}
             <div className="footer-brand">
               <div className="footer-logo">
-                <img src="/img/azeni_um_logo_transparent.png" height="35px" alt="Azenium" />
+                <img src="/img/azeni_um_logo_transparent.png" height="40px" alt="Azenium" />
               </div>
               <p className="footer-description">
                 Plateforme d'invitations virtuelles sécurisées avec technologie QR Code avancée.
                 La solution parfaite pour vos événements.
               </p>
+
+              {/* Logo placeholders */}
+              <div>
+                  <img src="/img/logo-normal.png" alt="Normal Logo" style={{ maxWidth: '150px', marginBottom: '10px' }} />
+                  <img src="/img/logo-long.png" alt="Long Logo" style={{ maxWidth: '200px' }} />
+              </div>
+
+              {/* Video Placeholder */}
+              <video src="/video/promo.mp4" controls width="100%" style={{ marginTop: '20px' }}></video>
+
             </div>
             
             {/* Quick Links */}
@@ -940,16 +933,16 @@ ${formData.message}`;
               <h4 className="footer-title">Liens Rapides</h4>
               <ul className="footer-links">
                 <li><a href="https://azenium.com/create" target="_blank" rel="noopener noreferrer">
-                  <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Créer un événement
-                </a></li><br />
+                    <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Créer un événement
+                </a></li>
                 <li><a href="https://azenium.com/events" target="_blank" rel="noopener noreferrer">
-                  <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Mes événements
+                    <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Mes événements
                 </a></li>
                 <li><a href="https://azenium.com/about" target="_blank" rel="noopener noreferrer">
-                  <FaExternalLinkAlt style={{ marginRight: '8px' }} /> À propos
+                    <FaExternalLinkAlt style={{ marginRight: '8px' }} /> À propos
                 </a></li>
                 <li><a href="https://azenium.com/support" target="_blank" rel="noopener noreferrer">
-                  <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Support
+                    <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Support
                 </a></li>
               </ul>
             </div>
@@ -959,13 +952,13 @@ ${formData.message}`;
               <h4 className="footer-title">Légal</h4>
               <ul className="footer-links">
                 <li><a href="https://azenium.com/privacy" target="_blank" rel="noopener noreferrer">
-                  <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Politique de confidentialité
+                    <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Politique de confidentialité
                 </a></li>
                 <li><a href="https://azenium.com/legal" target="_blank" rel="noopener noreferrer">
-                  <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Mentions légales
+                    <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Mentions légales
                 </a></li>
                 <li><a href="https://azenium.com/terms" target="_blank" rel="noopener noreferrer">
-                  <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Conditions d'utilisation
+                    <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Conditions d'utilisation
                 </a></li>
               </ul>
             </div>
@@ -984,19 +977,7 @@ ${formData.message}`;
                 </a>
               </div>
               <a href="https://azenium.com" target="_blank" rel="noopener noreferrer" 
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  marginTop: '1rem',
-                  padding: '0.75rem 1.25rem',
-                  background: 'linear-gradient(135deg, #3b82f6, #2563eb)',
-                  color: 'white',
-                  borderRadius: '0.5rem',
-                  fontWeight: '600',
-                  fontSize: '0.9rem',
-                  textDecoration: 'none'
-                }}>
+                className="footer-cta">
                 <FaGlobe /> Visiter azenium.com
               </a>
             </div>
