@@ -20,18 +20,18 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({ selectedTheme = 'dark' }) =
       <div className="custom-header-container">
         {/* Logo */}
         <div className="custom-logo">
-          <a href="https://azenium.com" target="_blank" rel="noopener noreferrer" className="custom-logo-link">
-            <span className="custom-logo-icon">
+          <a href="https://azenium.com" target="_blank" rel="noopener noreferrer" className="logo-link">
+            <span className="logo-icon">
               <img 
-                src={selectedTheme === 'dark' ? "/img/favicon.png" : "/image/favicon.png"} 
-                alt="Azenium" 
+                src={selectedTheme === 'dark' ? "/img/logo_transparent.png" : "/img/logo_transparent.png"} 
+                alt="" 
                 width="40px" 
               />
             </span>
-            <div className="custom-logo-text">
+            <span className="logo-text">
               <img src="/img/azeni_um_logo_transparent.png" height='25px' width='120px' alt="Logo de Azenium" title='logo de Azenium' />
               <small>Recherche de <span style={{color:'white', fontWeight:'bold'}}>Partenaire</span></small>
-            </div>
+            </span>
           </a>
         </div>
         

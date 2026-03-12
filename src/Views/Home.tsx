@@ -380,7 +380,7 @@ ${formData.message}`;
             Si vous êtes intéressé par un partenariat ou un investissement, contactez-nous !
           </p>
 
-          {/* CTA Buttons */}
+{/* CTA Buttons */}
           <div className="hero-cta-group">
             <button 
               className="btn btn-primary btn-large"
@@ -400,6 +400,22 @@ ${formData.message}`;
               <FaUserTie style={{ marginRight: '8px' }} />
               Devenir Agent Promo
             </Link>
+          </div>
+          
+          {/* Hero Video Showcase */}
+          <div className="hero-video-showcase">
+            <video 
+              className="hero-video"
+              controls 
+              preload="metadata"
+              poster="/img/images/partnership-image.jpg"
+            >
+              <source src="/video/azenium-homepage.mp4" type="video/mp4" />
+              Votre navigateur ne supporte pas la vidéo.
+            </video>
+            <p className="hero-video-caption">
+              Découvrez comment Azenium révolutionne les invitations virtuelles
+            </p>
           </div>
           
           {/* Stats */}
@@ -508,10 +524,25 @@ ${formData.message}`;
                 Nous recherchons activement des investisseurs ou partenaires pour accélérer le déploiement.
               </p>
               
-              <div className="investment-box">
+<div className="investment-box">
                 <h4>Investissement Recherché</h4>
                 <div className="investment-amount">À Discuter</div>
                 <p className="investment-note">Pourcentage selon notre discussion</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Project Media Showcase */}
+          <div className="project-media-showcase">
+            <div className="project-partnership-image">
+              <img src="/img/images/partnership-image.jpg" alt="Partenariat Azenium" />
+            </div>
+            <div className="project-logos">
+              <h4 className="project-logos-title">Galerie</h4>
+              <div className="project-logos-grid">
+                <img src="/img/long-logo.jpeg" alt="Logo Azenium" className="project-logo" />
+                <img src="/img/general-logo.png" alt="General Logo" className="project-logo" />
+                <img src="/img/azeni_um_logo_transparent.png" alt="Azenium Logo" className="project-logo" />
               </div>
             </div>
           </div>

@@ -1,67 +1,26 @@
-# TODO - Redesign Home.tsx avec Nouveau Design Premium
+# TODO: Move Footer Media to Homepage
 
-## ✅ TERMINÉ - Redesign Complet Premium
+## Task
+Move images and video from footer to more prominent positions in the homepage.
 
-### 1. ✅ Hero Section
-- [x] Background gradient animé avec orbes flottants
-- [x] Typographie oversize avec gradient sur texte
-- [x] Badge moderne avec glow effect
-- [x] Buttons avec shimmer animation
-- [x] Stats en cards avec design premium
-- [x] Scroll indicator animé
+## Media to Move:
+1. `/img/long-logo.jpeg` - Logo
+2. `/img/general-logo.png` - Logo
+3. `/img/images/partnership-image.jpg` - Partnership image
+4. `/video/azenium-homepage.mp4` - Video
 
-### 2. ✅ Section Projet
-- [x] Cards avec gradient background
-- [x] Hover effects spectaculaires
-- [x] Badges de status améliorés
-- [x] Highlight items avec background
+## Plan:
+1. [x] Add video to Hero Section - Display product video after CTA buttons
+2. [x] Add partnership image to Project Section - Show credibility
+3. [x] Add logos (long-logo & general-logo) to Project Section as "Trusted By" or partners
+4. [x] Add CSS styles for new media elements
 
-### 3. ✅ Section Fonctionnalités
-- [x] Grid 3 colonnes responsive
-- [x] Cards avec glassmorphism
-- [x] Icônes avec gradient backgrounds
-- [x] Hover scale et glow effects
-- [x] Tech stack box intégrée
+## Files Edited:
+- `src/Views/Home.tsx` - Added media elements to Hero and Project sections
+- `src/Css/Home.css` - Added styles for hero-video-showcase and project-media-showcase
 
-### 4. ✅ Section Roadmap
-- [x] Timeline horizontale moderne
-- [x] Points avec pulse animation
-- [x] Cards avec hover effects
-
-### 5. ✅ Section Investissement
-- [x] Cards avec gradient borders
-- [x] Featured card mise en évidence
-- [x] Hover effects spectaculaires
-
-### 6. ✅ Section Contact
-- [x] Formulaire glassmorphism
-- [x] Icônes de contact premium
-- [x] Social links avec hover colors
-
-### 7. ✅ Footer
-- [x] Design complet moderne
-- [x] CTA intégré
-- [x] Animations sur liens
-
-### 8. ✅ Design Global
-- [x] Nouvelles variables CSS premium
-- [x] Gradients cohérents
-- [x] Animations fluides
-- [x] Typographie Inter & Poppins
-
-### 9. ✅ Responsive Design
-- [x] Mobile (< 768px)
-- [x] Tablet (768px - 1024px)
-- [x] Desktop (> 1024px)
-
-## Résumé des modifications:
-- Nouveau design premium avec CSS variables avancées
-- Thème sombre/clair complet
-- Animations et transitions fluides
-- Effets de glow et glassmorphism
-- Composants responsive premium
-- Palette de couleurs professionnelle cohérente
-- Orbes flottants animés dans le hero
-- Timeline horizontale moderne
-- Cards avec effets de profondeur
+## Result:
+- Video now displays in Hero section after CTA buttons
+- Partnership image and logos now display in Project section under "Ils nous font confiance"
+- Original footer media gallery remains intact (can be removed later if desired)
 

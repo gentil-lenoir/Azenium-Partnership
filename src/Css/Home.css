@@ -622,6 +622,28 @@ a:hover {
   font-weight: 500;
 }
 
+/* Hero Video Showcase */
+.hero-video-showcase {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 700px;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(59, 130, 246, 0.2);
+  border: 2px solid var(--border-color);
+}
+
+.hero-video-caption {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
 /* Scroll Indicator */
 .hero-scroll {
   position: absolute;
@@ -970,6 +992,77 @@ a:hover {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-top: 0.25rem;
+}
+
+/* Project Media Showcase */
+.project-media-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 900px) {
+  .project-media-showcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-partnership-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(59, 130, 246, 0.15);
+}
+
+.project-partnership-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.project-partnership-image:hover img {
+  transform: scale(1.05);
+}
+
+.project-logos {
+  background: linear-gradient(145deg, var(--bg-card), var(--bg-secondary));
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+}
+
+.project-logos-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project-logos-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-logo {
+  max-width: 120px;
+  height: auto;
+  border-radius: var(--radius-md);
+  object-fit: contain;
+  transition: all var(--transition-base);
+  filter: brightness(0.9);
+}
+
+.project-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
 }
 
 /* ================================================
