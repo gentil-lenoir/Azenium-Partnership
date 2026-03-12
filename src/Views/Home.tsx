@@ -597,7 +597,6 @@ ${formData.message}`;
                 {galleryEvents.map(event => (
                   <a 
                     key={event.id} 
-                    href={event.externalUrl} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="gallery-event-card"
@@ -611,9 +610,9 @@ ${formData.message}`;
                     <div className="gallery-event-overlay">
                       <span className="gallery-event-category">{event.category}</span>
                       <span className="gallery-event-title">{event.title}</span>
-                      <span className="gallery-event-link">
+                      {/* <span className="gallery-event-link">
                         <FaExternalLinkAlt /> Découvrir
-                      </span>
+                      </span> */}
                     </div>
                   </a>
                 ))}
@@ -1029,9 +1028,6 @@ ${formData.message}`;
               <ul className="footer-links">
                 <li><a href="https://azenium.com/create" target="_blank" rel="noopener noreferrer">
                     <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Créer un événement
-                </a></li>
-                <li><a href="https://azenium.com/events" target="_blank" rel="noopener noreferrer">
-                    <FaExternalLinkAlt style={{ marginRight: '8px' }} /> Mes événements
                 </a></li>
                 <li><a href="https://azenium.com/about" target="_blank" rel="noopener noreferrer">
                     <FaExternalLinkAlt style={{ marginRight: '8px' }} /> À propos
