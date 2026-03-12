@@ -216,7 +216,7 @@ const galleryEvents: GalleryEvent[] = [
     id: 4,
     title: "Anniversaire Festif",
     category: "Anniversaire",
-    imageUrl: "https://images.unsplash.com/photo-1530103862676-de3c9a59af38?w=400&h=300&fit=crop",
+    imageUrl: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&h=300&fit=crop",
     externalUrl: "https://azenium.com/events/birthday"
   },
   {
@@ -424,7 +424,7 @@ ${formData.message}`;
           
           {/* Title */}
           <h1 className="hero-title">
-            Recherchons un <span className="highlight">Partenaire Stratégique</span>
+            Nous Cherchons un <span className="highlight">Partenaire Stratégique</span>
           </h1>
           
           {/* Subtitle */}
