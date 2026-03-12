@@ -153,30 +153,30 @@ const timelineItems: TimelineItem[] = [
   },
   {
     id: 2,
-    date: "Déc 2025",
-    title: "Tests Beta",
+    date: "Jan 2026",
+    title: "Tests",
     description: "Validation avec 50+ utilisateurs réels",
     status: 'completed'
   },
   {
     id: 3,
-    date: "Déc 2025",
+    date: "Feb 2026",
     title: "Intégration Paiements",
     description: "PayPal & Flutterwave pour l'Afrique",
     status: 'current'
   },
   {
     id: 4,
-    date: "Jan 2026",
-    title: "Lancement Officiel",
-    description: "Mise en production complète",
+    date: "Feb 2026",
+    title: "Recherche de Partenaires",
+    description: "Mise en recherche de partenaires et investisseurs",
     status: 'future'
   },
   {
     id: 5,
     date: "2026",
     title: "Expansion Internationale",
-    description: "5 nouveaux pays africains",
+    description: "Plusieurs nouveaux pays africains",
     status: 'future'
   }
 ];
@@ -916,16 +916,6 @@ ${formData.message}`;
                 Plateforme d'invitations virtuelles sécurisées avec technologie QR Code avancée.
                 La solution parfaite pour vos événements.
               </p>
-
-              {/* Logo placeholders */}
-              <div>
-                  <img src="/img/logo-normal.png" alt="Normal Logo" style={{ maxWidth: '150px', marginBottom: '10px' }} />
-                  <img src="/img/logo-long.png" alt="Long Logo" style={{ maxWidth: '200px' }} />
-              </div>
-
-              {/* Video Placeholder */}
-              <video src="/video/promo.mp4" controls width="100%" style={{ marginTop: '20px' }}></video>
-
             </div>
             
             {/* Quick Links */}

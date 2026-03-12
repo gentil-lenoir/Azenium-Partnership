@@ -1776,6 +1776,8 @@ a:hover {
 
 .footer-links {
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-links li {

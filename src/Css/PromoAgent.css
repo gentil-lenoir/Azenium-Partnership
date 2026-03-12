@@ -1115,6 +1115,7 @@ body.dark-theme {
 
 .promo-footer .footer-links {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
@@ -1375,6 +1376,7 @@ body.dark-theme {
 
 .footer-links {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2rem;
