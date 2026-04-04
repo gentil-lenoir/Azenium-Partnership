@@ -378,26 +378,25 @@ ${formData.message}`;
         selectedTheme={selectedTheme}
       />
 
-      {/* Language and Theme Selector */}
-      <div className="language-selector-container">
-        <div className="language-selector-wrapper">
-          <div className="gtranslate_wrapper"></div>
-        </div>
-        
-        <div className="theme-selector-wrapper">
-          <select 
-            className="theme-select"
-            value={selectedTheme}
-            onChange={(e) => setSelectedTheme(e.target.value)}
-          >
-            <option value="dark">🌙 Dark</option>
-            <option value="light">☀️ Light</option>
-          </select>
-        </div>
-      </div>
-
       {/* ==================== HERO SECTION ==================== */}
       <section id="home" className="hero-section" ref={heroRef}>
+        {/* Language and Theme Selector */}
+        <div className="language-selector-container">
+          <div className="language-selector-wrapper">
+            <div className="gtranslate_wrapper"></div>
+          </div>
+          
+          <div className="theme-selector-wrapper">
+            <select 
+              className="theme-select"
+              value={selectedTheme}
+              onChange={(e) => setSelectedTheme(e.target.value)}
+            >
+              <option value="dark">🌙 Dark</option>
+              <option value="light">☀️ Light</option>
+            </select>
+          </div>
+        </div>
         {/* Background Effects */}
         <div className="hero-bg">
           <div className="hero-grid"></div>

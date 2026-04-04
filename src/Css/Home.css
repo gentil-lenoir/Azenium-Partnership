@@ -385,15 +385,16 @@ a:hover {
    ================================================ */
 
 .hero-section {
+  --header-height: 90px;
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10rem 2rem 5rem;
+  min-height: calc(100vh - var(--header-height));
+  /* padding-top: calc(10rem + var(--header-height)); */
+  padding-top: 1rem !important;
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background: var(--gradient-hero);
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Animated Background */
@@ -2123,13 +2124,18 @@ a:hover {
    ================================================ */
 
 .language-selector-container {
-  position: fixed;
+  position: sticky;
   top: 90px;
   right: 24px;
   z-index: 1001;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  align-items: flex-end;
 }
 
 .language-selector-wrapper,
@@ -2137,7 +2143,8 @@ a:hover {
   background: linear-gradient(145deg, var(--bg-card), var(--bg-secondary));
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 0.6rem;
+  padding: 0.4rem 0.6rem 0.4rem 0.3rem;
+  max-width: 140px;
 }
 
 .language-selector-wrapper select,
@@ -2148,6 +2155,8 @@ a:hover {
   font-size: 0.85rem;
   cursor: pointer;
   padding: 0.35rem 0.5rem;
+  width: 100%;
+  text-align: right;
 }
 
 .language-selector-wrapper select:focus,
@@ -2208,12 +2217,35 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .language-selector-container {
+    right: 1rem;
+    top: 80px;
+    gap: 0.15rem;
+  }
+  
+  .language-selector-wrapper,
+  .theme-selector-wrapper {
+    padding: 0.25rem 0.4rem 0.25rem 0.2rem;
+    max-width: 80px;
+  }
+  
+  .language-selector-wrapper select,
+  .theme-selector-wrapper select {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.25rem;
+  }
+  
   .section {
     padding: 5rem 1.5rem;
   }
   
   .hero-section {
     padding: 8rem 1.5rem 4rem;
+  }
+  
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
   }
   
   .hero-title {
