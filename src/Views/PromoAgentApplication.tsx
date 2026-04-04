@@ -665,7 +665,7 @@ const PromoAgentApplication: React.FC = () => {
               <h4>Contactez-nous</h4>
               <div className="footer-contact-item">
                 <FaEnvelope />
-                <a href="mailto:quevvy@outlook.com">quevvy@outlook.com</a>
+                <a href="mailto:quevvy.platform@outlook.com">quevvy.platform@outlook.com</a>
               </div>
               <div className="footer-contact-item">
                 <FaWhatsapp />

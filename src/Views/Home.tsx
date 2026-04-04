@@ -50,7 +50,7 @@ const projectData = {
 const contactInfo: ContactInfo = {
   whatsapp: ["+243978089552"],
   phoneNumbers: ["+250729606087", "+243978089552"],
-  emails: ["quevvy@outlook.com", "gentillenoir075@outlook.com"],
+  emails: ["quevvy.platform@outlook.com", "quevvy.platform@gmail.com"],
   portfolioUrl: "https://gentil-lenoir.vercel.app/portfolio",
 };
 
@@ -434,8 +434,8 @@ ${formData.message}`;
             Si vous êtes intéressé par un partenariat ou un investissement, contactez-nous !
           </p>
 
-{/* CTA Buttons */}
-          <div className="hero-cta-group">
+          {/* CTA Buttons */}
+          {/* <div className="hero-cta-group">
             <button 
               className="btn btn-primary btn-large"
               onClick={() => scrollToSection('investment')}
@@ -454,10 +454,10 @@ ${formData.message}`;
               <FaUserTie style={{ marginRight: '8px' }} />
               Devenir Agent Promo
             </Link>
-          </div>
+          </div> */}
           
           {/* Hero Video Showcase */}
-          <div className="hero-video-showcase">
+          {/* <div className="hero-video-showcase">
             <video 
               className="hero-video"
               controls 
@@ -469,7 +469,7 @@ ${formData.message}`;
             <p className="hero-video-caption">
               Découvrez comment Quevvy révolutionne les invitations virtuelles
             </p>
-          </div>
+          </div> */}
           
           {/* Stats */}
           <div className="hero-stats">
@@ -792,7 +792,7 @@ ${formData.message}`;
           </div>
           
           {/* Promo Agent CTA */}
-          <div className="promo-cta">
+          {/* <div className="promo-cta">
             <div className="promo-cta-icon">
               <FaUserTie />
             </div>
@@ -809,7 +809,7 @@ ${formData.message}`;
               Découvrir le Programme
               <FaArrowRight />
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -1059,7 +1059,7 @@ ${formData.message}`;
               <h4 className="footer-title">Contactez-nous</h4>
               <div className="footer-contact-item">
                 <FaEnvelope />
-                <a href="mailto:quevvy@outlook.com">quevvy@outlook.com</a>
+                <a href="mailto:quevvy.platform@outlook.com">quevvy.platform@outlook.com</a>
               </div>
               <div className="footer-contact-item">
                 <FaWhatsapp />
