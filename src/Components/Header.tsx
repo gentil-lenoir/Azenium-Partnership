@@ -48,13 +48,13 @@ const Header: React.FC<HeaderProps> = ({
           <a href="https://quevvy.com" target="_blank" rel="noopener noreferrer" className="logo-link">
             <span className="logo-icon">
               <img 
-                src={selectedTheme === 'dark' ? "/img/logo_transparent.png" : "/img/logo_transparent.png"} 
+                src="quevvy_logo_transparent.png"
                 alt="" 
                 width="40px" 
               />
             </span>
             <span className="logo-text">
-              <img src="/img/quevvy_logo_transparent.png" height='25px' width='120px' alt="Logo de Quevvy" title='logo de Quevvy' />
+              <img src="/img/quevvy_logo_transparent.png" height='25px' width='100px' alt="Logo de Quevvy" title='logo de Quevvy' />
               <small>Recherche de <span style={{color:'white', fontWeight:'bold'}}>Partenaire</span></small>
             </span>
           </a>
